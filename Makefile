@@ -1,5 +1,5 @@
 setup:
-	source venv/bin/activate
+	python3 -m venv venv
 
 install:
 	pip install --upgrade pip &&\
@@ -9,6 +9,6 @@ test:
 	python -m pytest -vv tests/*.py
 
 lint:
-	pylint --disable=R,C file-adapter
+	pylint --disable=R,C src/mod.py
 
 all: install lint test
